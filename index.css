@@ -72,7 +72,7 @@ h5 {
 p {
   color: var(--p-color);
   font-size: var(--p-font-size);
-  font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-normal);
   letter-spacing: 0.5px;
   text-align: justify;
 }
@@ -490,6 +490,12 @@ strong {
   .team-thumb {
     left: 0;
     width: auto;
+  }
+}
+
+@media (min-width:576px) {
+  .custom-class{
+     display:block;
   }
 }
 
