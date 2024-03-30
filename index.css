@@ -329,7 +329,11 @@ strong {
 
 .gallery-thumb {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
+  
+  display: inline-block;
+  margin-bottom: 20px;
+  
 }
 
 .gallery-info {
@@ -341,6 +345,18 @@ strong {
 .gallery-image {
   display: block;
   transition: transform 0.6s ease-out;
+
+  border: 3px solid #ccc; /* Adaugă o bordură de 3px în jurul imaginii */
+  transition: border-color 0.3s ease; /* Efect de tranziție pentru culoarea bordurii */
+}
+
+.team-image {
+  border: 3px solid #8a7878; /* Adaugă o bordură de 3px în jurul imaginii */
+  transition: border-color 0.3s ease; /* Efect de tranziție pentru culoarea bordurii */
+}
+
+.gallery-thumb:hover .gallery-image {
+  border-color: rgb(67, 73, 158); /* Schimbă culoarea bordurii la albastru la survol */
 }
 
 .gallery-image {
@@ -458,12 +474,6 @@ strong {
 
 /* RESPONSIVE STYLES */
 
-@media screen and (min-width: 1600px) {
-  .news-two-column {
-    min-height: 232.5px;
-  }
-}
-
 @media screen and (max-width: 991px) {
   h2 {
     font-size: 36px;
@@ -503,4 +513,14 @@ strong {
   .heroText p {
     font-size: 14px;
   }
+}
+
+.hero {
+  height: 100vh;
+}
+
+.custom-video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
 }
